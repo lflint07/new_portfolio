@@ -4,56 +4,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css" />
     <title>Luke Portfolio</title>
 </head>
 
 <body>
+    <!-- Hero-->
+    <section class="hero is-fullheight" style="background-image: url(images/galaxy.jpg); background-repeat: no-repeat;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Hello, I'm Luke Flint
+                </h1>
+                <p href="https://github.com/lflint07" target="_blank">
+                    Welcome to my portfolio
+                </p>
+            </div>
+        </div>
+    </section>
     <!-- Navbar-->
-    <nav id="main-navbar" class="navbar">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: #1B2F38;">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item">
-                    <p>Luke Flint</p>
-                </a>
             </div>
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item">
+            <div class="navbar-menu is-active">
+                <div class="navbar-start">
+                    <a id="about" class="navbar-item">
                         About
-                    </a>
-                    <a class="navbar-item">
-                        Projects
-                    </a>
-                    <a class="navbar-item">
-                        Contact
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Hero-->
-    <section class="hero is-large">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
-                    Luke Flint
-                </h1>
-                <p href="https://github.com/lflint07" target="_blank">
-                    Click this link
-                </p>
-            </div>
-        </div>
-    </section>
     <!-- About-->
-    <section id="about" class="section is-medium">
+    <section class="section is-medium" style="background-color: #506E6F;">
+        <a href="#about"></a>
         <div class="container">
+            <div class="content has-text-centered" style="color: #DA8498;">
+                <h1 class="title">
+                    ABOUT
+                </h1>
+            </div>
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title">One</p>
+                        <p class="title">Professional</p>
                         <p class="subtitle">Subtitle</p>
                     </article>
                 </div>
@@ -77,127 +74,64 @@
                 </div>
             </div>
             <div class="tile is-ancestor avi">
-                <div class="tile is-parent">
+                <div class="tile is-parent is-4">
                     <article class="tile is-child box">
                         <figure class="image is-128x128">
                             <img src="/images/me.jpeg">
                         </figure>
                     </article>
                 </div>
+                <div class="tile is-parent is-8">
+                    <article class="tile is-child box">
+                        <h1 class="title"></h1>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsam
+                            suscipit doloribus porro dolorem reiciendis facere? Cumque doloribus fugiat architecto qui
+                            nobis! Illum amet accusantium quod eligendi modi mollitia magni?</p>
+                    </article>
+                </div>
             </div>
         </div>
-
-
-
-        <!-- <div class="columns">
-                <div class="column level is-full">
-                    <h3 class="title level-item">About</h3>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column is-one-quarter has-background-primary">About Me
-                    <p>Information here </p>
-                </div>
-                <div class="column is-one-quarter has-background-light">Professional
-                    <p>Information here</p>
-                </div>
-                <div class="column is-one-quarter has-background-primary">Skills
-                    <p>information here</p>
-                </div>
-                <div class="column is-one-quarter has-background-light">Art</div>
-            </div>
-            <div class="columns is-2">
-                <div class="column">
-                    <figure class="image is-128x128">
-                        <img src="images/me.jpeg">
-                    </figure>
-                </div>
-                <div class="column">
-                    <h3>What I'm looking for here?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cumque, eligendi aperiam
-                        adipisci perspiciatis tempore assumenda autem non provident iusto quia necessitatibus libero
-                        magni mollitia veritatis molestiae harum ad obcaecati.</p>
-                </div>
-            </div> -->
     </section>
     <!-- Projects-->
-    <section id="projects" class="section is-medium has-background-light">
+    <section class="projects section is-medium" style="background-color: #F49575">
         <div class="container">
-            <div class="title is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child notification">
-                        <div class="content has-text-centered">
-                            <p class="title">Projects</p>
-                        </div>
+            <div class="content has-text-centered">
+                <p class="title">Projects</p>
+            </div>
+            <div class="tile is-vertical">
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification" style="background-color: #55083E">
+                            <p class="title">Vertical...</p>
+                            <p class="subtitle">Top tile</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
                     </div>
-                </div>
-                <div class="tile is-ancestor">
-                    <div class="tile">
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-primary">
-                                <p class="title">Vertical...</p>
-                                <p class="subtitle">Top tile</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Middle tile</p>
-                                <p class="subtitle">With an image</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Middle tile</p>
-                                <p class="subtitle">With an image</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
                     </div>
-                </div>
-                <div class="tile is-vertical">
-                    <div class="tile">
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-primary">
-                                <p class="title">Vertical...</p>
-                                <p class="subtitle">Top tile</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Middle tile</p>
-                                <p class="subtitle">With an image</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Middle tile</p>
-                                <p class="subtitle">With an image</p>
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                                </figure>
-                            </article>
-                        </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-info">
+                            <p class="title">Middle tile</p>
+                            <p class="subtitle">With an image</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer id="footer" class="footer">
+    <footer class="footer" style="background-color: #55083E;">
         <div class="container">
             <div class="tile is-ancestor is-12" style="align-items: center;">
                 <div class="tile is-parent has-text-centered">

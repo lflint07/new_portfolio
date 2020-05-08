@@ -1,34 +1,4 @@
-body {
-    background-color: green;
-}
 
-#main-navbar {
+navbar {
     background-color: #324856;
-}
-
-.navbar-menu {
-    color: white;
-}
-
-.hero {
-    background-color: #4A746A;
-}
-
-.hero-head {
-    background-color: rebeccapurple;
-}
-
-#footer {
-    background-color: #324856;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer {
-    background-color: aquamarine;
-}
-
-.center {
-    max-width: 300px;
 }

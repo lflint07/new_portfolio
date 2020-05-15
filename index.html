@@ -7,93 +7,97 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css" />
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
     <title>Luke Portfolio</title>
 </head>
 
 <body>
     <!-- Hero-->
-    <section class="hero is-fullheight" style="background-image: url(images/galaxy.jpg); background-repeat: no-repeat;">
-        <div class="hero-body">
+    <section id="home" class="hero is-fullheight" style="background-color: #1B2F38">
+        <div class="hero-body"
+            style="background-image: url('images/galaxy.jpg'); background-position: center; background-repeat: no-repeat;">
             <div class="container has-text-centered">
-                <h1 class="title">
-                    Hello, I'm Luke Flint
-                </h1>
-                <p href="https://github.com/lflint07" target="_blank">
-                    Welcome to my portfolio
-                </p>
+                <h1 class="title" style="color:white;">Hello, I'm Luke Flint</h1>
+                <h2 style="color: #1B2F38">Welcome to my portfolio</h2>
             </div>
         </div>
     </section>
     <!-- Navbar-->
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: #1B2F38;">
+    <nav id="main-navbar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation"
+        style="background-color: #1B2F38; background-size: auto;">
         <div class="container">
-            <div class="navbar-brand">
-            </div>
             <div class="navbar-menu is-active">
-                <div class="navbar-start">
-                    <a id="about" class="navbar-item">
-                        About
-                    </a>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#home" style="color: #F49575;">Home</a>
+                    <a class="navbar-item" href="#about" style="color: #F49575;">About</a>
+                    <a class="navbar-item" href="#projects" style="color: #F49575">Projects</a>
+                    <a class="navbar-item" href="#connect" style="color: #F49575">Connect</a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- About-->
-    <section class="section is-medium" style="background-color: #506E6F;">
-        <a href="#about"></a>
+    <section class="section is-small">
+        <a id="about"></a>
         <div class="container">
-            <div class="content has-text-centered" style="color: #DA8498;">
-                <h1 class="title">
+            <div class="content has-text-centered" style>
+                <span class="title" style="color: #A82C7A">
                     ABOUT
-                </h1>
+                </span>
             </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Professional</p>
-                        <p class="subtitle">Subtitle</p>
-                    </article>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Two</p>
-                        <p class="subtitle">Subtitle</p>
-                    </article>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Three</p>
-                        <p class="subtitle">Subtitle</p>
-                    </article>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Four</p>
-                        <p class="subtitle">Subtitle</p>
-                    </article>
-                </div>
-            </div>
-            <div class="tile is-ancestor avi">
+            <div class="tile is-ancestor is-12">
                 <div class="tile is-parent is-4">
+                    <article class="tile is-child box has-text-centered" style="background-color: #55083E">
+                        <a class="title modal-button" data-target="#modal"
+                            style="background-color: #55083E; color: #DA8498">
+                            <h1>About Me</h1>
+                        </a>
+                    </article>
+                    <div id="modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Modal Card</p>
+                                <button class="delete modal-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <h1>Level One</h1>
+                                    <p>This is simple text.</p>
+                                    <h1>Level Two</h1>
+                                    <p>This is simple text.</p>
+                                    <h1>Level Three</h1>
+                                    <p>This is simple text.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-parent is-4">
+                    <article class="tile is-child box has-text-centered" style="background-color: #55083E">
+                        <p class="title" style="color: #DA8498">Professional Work</p>
+                    </article>
+                </div>
+                <div class="tile is-parent is-4">
+                    <article class="tile is-child box has-text-centered" style="background-color: #55083E">
+                        <p class="title" style="color: #DA8498">Creative</p>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-ancestor avi is-2">
+                <div class="tile is-parent" style="background-color: #55083E;">
                     <article class="tile is-child box">
                         <figure class="image is-128x128">
                             <img src="/images/me.jpeg">
                         </figure>
                     </article>
                 </div>
-                <div class="tile is-parent is-8">
-                    <article class="tile is-child box">
-                        <h1 class="title"></h1>
-                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsam
-                            suscipit doloribus porro dolorem reiciendis facere? Cumque doloribus fugiat architecto qui
-                            nobis! Illum amet accusantium quod eligendi modi mollitia magni?</p>
-                    </article>
-                </div>
             </div>
         </div>
     </section>
-    <!-- Projects-->
-    <section class="projects section is-medium" style="background-color: #F49575">
+    <!--Projects-->
+    <section id="projects" class="section is-medium" style="background-color: gray">
         <div class="container">
             <div class="content has-text-centered">
                 <p class="title">Projects</p>
@@ -101,7 +105,7 @@
             <div class="tile is-vertical">
                 <div class="tile">
                     <div class="tile is-parent">
-                        <article class="tile is-child notification" style="background-color: #55083E">
+                        <article class="tile is-child notification">
                             <p class="title">Vertical...</p>
                             <p class="subtitle">Top tile</p>
                             <figure class="image is-4by3">
@@ -128,16 +132,21 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!--Connect-->
+    <section id="connect" class="section is-medium" style="background-color: #506E6F">
+        <div class="container">
+            <h1 class="title">Connect</h1>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="footer" style="background-color: #55083E;">
+    <!--Footer-->
+    <footer class="footer" style="background-color: #1B2F38;">
         <div class="container">
             <div class="tile is-ancestor is-12" style="align-items: center;">
                 <div class="tile is-parent has-text-centered">
                     <div class="tile is-child ">
                         <a href="https://www.linkedin.com/in/lflint/" target="_blank">
-                            <span class="icon is-large has-text-white">
+                            <span class="icon is-large" style="color: #F49575">
                                 <i class="fa fa-2x fa fa-linkedin-square" aria-hidden="true"></i>
                             </span>
                         </a>
@@ -146,7 +155,7 @@
                 <div class="tile is-parent has-text-centered">
                     <div class="tile is-child">
                         <a href="https://github.com/lflint07" target="_blank">
-                            <span class="icon is-large has-text-white">
+                            <span class="icon is-large" style="color: #F49575">
                                 <i class="fas fa-2x fa fa-github-square" aria-hidden="true">
                                 </i>
                             </span>
@@ -156,7 +165,7 @@
                 <div class="tile is-parent has-text-centered">
                     <div class="tile is-child">
                         <a href="https://www.instagram.com/inlikecoolhand/" target="_blank">
-                            <span class="icon is-large has-text-white">
+                            <span class="icon is-large" style="color: #F49575">
                                 <i class="fas fa-2x fa fa-instagram" aria-hidden="true"></i>
                             </span>
                         </a>
@@ -165,15 +174,30 @@
                 <div class="tile is-parent  has-text-centered">
                     <div class="tile is-child">
                         <a href="https://codepen.io/inlikecoolhand" target="_blank">
-                            <span class="icon is-large has-text-white">
+                            <span class="icon is-large" style="color: #F49575">
                                 <i class="fa fa-2x fa fa-codepen" aria-hidden="true"></i>
                             </span>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="footnote content has-text-centered" style="color: #F49575">
+                <p>Designed by Luke Flint 2020</p>
+            </div>
         </div>
     </footer>
+    <script>
+        $(".modal-button").click(function(){
+            var target = $(this).data("target");
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+        });
+        
+        $(".modal-close").click(function(){
+            $("html").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+        });
+    </script>
 </body>
 
 </html>

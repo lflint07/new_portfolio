@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css" />
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="/scripts/scripts.js"></script>
+    <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- <script src="/scripts/scripts.js"></script> -->
     <title>Luke Portfolio</title>
 </head>
 
@@ -49,17 +49,17 @@
             <div class="tile is-ancestor is-12">
                 <div class="tile is-parent is-4">
                     <article class="tile is-child box has-text-centered" style="background-color: #55083E">
-                        <a class="title modal-button" data-target="#modal"
+                        <a id="about-button" class="title modal-button"
                             style="background-color: #55083E; color: #DA8498">
-                            <h1>About Me</h1>
+                            About Me
                         </a>
                     </article>
-                    <div id="modal" class="modal">
+                    <div id="about-modal" class="modal">
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
                                 <p class="modal-card-title">Modal Card</p>
-                                <button class="delete modal-close" aria-label="close"></button>
+                                <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
                                 <div class="content">
@@ -76,8 +76,28 @@
                 </div>
                 <div class="tile is-parent is-4">
                     <article class="tile is-child box has-text-centered" style="background-color: #55083E">
-                        <p class="title" style="color: #DA8498">Professional Work</p>
+                        <a id="professional-button" class="title modal-button" style="color: #DA8498">
+                            Professional Work
+                        </a>
                     </article>
+                    <div id="professional-modal" class="modal">
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Modal Card</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <h1>Level One</h1>
+                                    <p>This is simple text.</p>
+                                    <h1>Level Two</h1>
+                                    <p>This is simple text.</p>
+                                    <h1>Level Three</h1>
+                                    <p>This is simple text.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
                 <div class="tile is-parent is-4">
                     <article class="tile is-child box has-text-centered" style="background-color: #55083E">
@@ -187,16 +207,53 @@
         </div>
     </footer>
     <script>
-        $(".modal-button").click(function(){
-            var target = $(this).data("target");
-            $("html").addClass("is-clipped");
-            $(target).addClass("is-active");
-        });
+        //    $(".modal-button").click(function() {
+        //        var target = $(this).data("target");
+        //        $("html").addClass("is-clipped");
+        //        $(target).addClass("is-active");
+        //    });
+
+        //    $("modal-close").click(function() {
+        //        $("html").removeClass("is-clipped");
+        //        $(this).parent().removeClass("is-active");
+        //    });
+
+
+
+        //var button = document.getElementsByClassName('modal-button');
+        // var modal = document.getElementsByClassName('modal');
+        // var close = document.getElementsByClassName('delete')[0];
+
+        // button.onclick = function(){
+        //     modal.style.display = 'block';
+        // }
+
+        // close.onclick = function() {
+        //     modal.style.display= 'none';
+        // };
         
-        $(".modal-close").click(function(){
-            $("html").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-        });
+        var aboutButton = document.getElementById('about-button');
+        var aboutModal = document.getElementById('about-modal');
+        
+        aboutButton.onclick = function () {
+            aboutModal.style.display = 'block';
+        }
+        close.onclick = function () {
+            aboutModal.style.display = 'none';
+        };
+        
+        
+        var professionalButton = document.getElementById('professional-button');
+        var professionalModal = document.getElementById('professional-modal');
+        var close = document.getElementsByClassName('delete')[0];
+        
+        professionalButton.onclick = function () {
+            professionalModal.style.display = 'block';
+        }
+        close.onclick = function () {
+            professionalModal.style.display = 'none';
+        };
+        
     </script>
 </body>
 

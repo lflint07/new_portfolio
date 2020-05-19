@@ -47,7 +47,7 @@
                 </span>
             </div>
             <div class="tile is-ancestor is-12">
-                <div class="tile is-parent is-4">
+                <div id="about-parent" class="tile is-parent is-4">
                     <article class="tile is-child box has-text-centered" style="background-color: #55083E">
                         <a id="about-button" class="title modal-button"
                             style="background-color: #55083E; color: #DA8498">
@@ -55,20 +55,19 @@
                         </a>
                     </article>
                     <div id="about-modal" class="modal">
-                        <div class="modal-background"></div>
+                        <div id="about-modal-background" class="modal-background" style="overflow: hidden;"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
                                 <p class="modal-card-title">Modal Card</p>
-                                <button class="delete" aria-label="close"></button>
+                                <button id="about-button-delete" class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
-                                <div class="content">
-                                    <h1>Level One</h1>
-                                    <p>This is simple text.</p>
-                                    <h1>Level Two</h1>
-                                    <p>This is simple text.</p>
-                                    <h1>Level Three</h1>
-                                    <p>This is simple text.</p>
+                                <div class="tile is-parent" style="background-color: #55083E;">
+                                    <article class="tile is-child box">
+                                        <figure class="image is-128x128">
+                                            <img src="/images/me.jpeg">
+                                        </figure>
+                                    </article>
                                 </div>
                             </section>
                         </div>
@@ -81,10 +80,11 @@
                         </a>
                     </article>
                     <div id="professional-modal" class="modal">
+                        <div class="modal-background"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
                                 <p class="modal-card-title">Modal Card</p>
-                                <button class="delete" aria-label="close"></button>
+                                <button id="professional-button-delete" class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
                                 <div class="content">
@@ -101,17 +101,29 @@
                 </div>
                 <div class="tile is-parent is-4">
                     <article class="tile is-child box has-text-centered" style="background-color: #55083E">
-                        <p class="title" style="color: #DA8498">Creative</p>
+                        <a id="creative-button" class="title modal-button" style="color: #DA8498">
+                            Creative Work
+                        </a>
                     </article>
-                </div>
-            </div>
-            <div class="tile is-ancestor avi is-2">
-                <div class="tile is-parent" style="background-color: #55083E;">
-                    <article class="tile is-child box">
-                        <figure class="image is-128x128">
-                            <img src="/images/me.jpeg">
-                        </figure>
-                    </article>
+                    <div id="creative-modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Creative Work</p>
+                                <button id="creative-button-delete" class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <p>This is simple text.</p>
+                                    <h1>Level Two</h1>
+                                    <p>This is simple text.</p>
+                                    <h1>Level Three</h1>
+                                    <p>This is simple text.</p>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,32 +132,28 @@
     <section id="projects" class="section is-medium" style="background-color: gray">
         <div class="container">
             <div class="content has-text-centered">
-                <p class="title">Projects</p>
+                <h1 class="title" style="color: #F49575">PROJECTS</h1>
             </div>
             <div class="tile is-vertical">
                 <div class="tile">
                     <div class="tile is-parent">
-                        <article class="tile is-child notification">
-                            <p class="title">Vertical...</p>
-                            <p class="subtitle">Top tile</p>
+                        <article class="tile is-child notification" style="background-color: #F49575">
                             <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                                <img src="images/dictionary_app.png">
                             </figure>
                         </article>
                     </div>
                     <div class="tile is-parent">
-                        <article class="tile is-child">
+                        <article class="tile is-child notification" style="background-color: #F49575;">
                             <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                                <img src="images/ios_calender_app.png">
                             </figure>
                         </article>
                     </div>
                     <div class="tile is-parent">
-                        <article class="tile is-child notification is-info">
-                            <p class="title">Middle tile</p>
-                            <p class="subtitle">With an image</p>
+                        <article class="tile is-child notification" style="background-color: #F49575;">
                             <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                                <img src="images/coming_soon.jpg">
                             </figure>
                         </article>
                     </div>
@@ -156,7 +164,7 @@
     <!--Connect-->
     <section id="connect" class="section is-medium" style="background-color: #506E6F">
         <div class="container">
-            <h1 class="title">Connect</h1>
+            <h1 class="title has-text-centered">CONNECT</h1>
         </div>
     </section>
     <!--Footer-->
@@ -234,27 +242,56 @@
         
         var aboutButton = document.getElementById('about-button');
         var aboutModal = document.getElementById('about-modal');
+        var aboutClose = document.getElementById('about-button-delete');
+        //var aboutNoScroll = document.getElementById('about-parent');
         
         aboutButton.onclick = function () {
             aboutModal.style.display = 'block';
         }
-        close.onclick = function () {
+        aboutClose.onclick = function () {
             aboutModal.style.display = 'none';
-        };
+        }
+
+
         
+      
         
         var professionalButton = document.getElementById('professional-button');
         var professionalModal = document.getElementById('professional-modal');
-        var close = document.getElementsByClassName('delete')[0];
+        var professionalClose = document.getElementById('professional-button-delete');
         
         professionalButton.onclick = function () {
             professionalModal.style.display = 'block';
         }
-        close.onclick = function () {
+        professionalClose.onclick = function () {
             professionalModal.style.display = 'none';
+        };
+
+        var creativeButton = document.getElementById('creative-button');
+        var creativeModal = document.getElementById('creative-modal');
+        var creativeClose = document.getElementById('creative-button-delete')
+
+        creativeButton.onclick = function () {
+            creativeModal.style.display = 'block';
+        }
+
+        creativeClose.onclick = function () {
+            creativeModal.style.display = 'none';
         };
         
     </script>
 </body>
 
 </html>
+
+
+<!-- body {
+    background-image: url('./assets/svg/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #464646;
+    display: flex;
+    flex-wrap: wrap;
+  } -->

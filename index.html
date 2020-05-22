@@ -16,7 +16,7 @@
     <!-- Hero-->
     <section id="home" class="hero is-fullheight" style="background-color: #1B2F38">
         <div class="hero-body"
-            style="background-image: url('images/galaxy.jpg'); background-position: center; background-repeat: no-repeat;">
+            style="background-image: url('images/galaxy.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center center; display: flex; flex-wrap: wrap;">
             <div class="container has-text-centered">
                 <h1 class="title" style="color:white;">Hello, I'm Luke Flint</h1>
                 <h2 style="color: #1B2F38">Welcome to my portfolio</h2>
@@ -55,19 +55,32 @@
                         </a>
                     </article>
                     <div id="about-modal" class="modal">
-                        <div id="about-modal-background" class="modal-background" style="overflow: hidden;"></div>
+                        <div id="about-modal-background" class="modal-background">
+                        </div>
                         <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">Modal Card</p>
+                            <header class="modal-card-head" style="background-color: gray;">
+                                <p class="modal-card-title has-text-centered" style="color:#DA8498">About Me</p>
                                 <button id="about-button-delete" class="delete" aria-label="close"></button>
                             </header>
-                            <section class="modal-card-body">
-                                <div class="tile is-parent" style="background-color: #55083E;">
-                                    <article class="tile is-child box">
-                                        <figure class="image is-128x128">
-                                            <img src="/images/me.jpeg">
-                                        </figure>
-                                    </article>
+                            <section class="modal-card-body" style="color: #55083E;">
+                                <div class="tile is-parent">
+                                    <div class="tile is-child box is-horizontal-center">
+                                        <div class="card-content" style="justify-content: center;">
+                                            <figure class="image is-128x128">
+                                                <img class="is-rounded" src="/images/me.jpeg">
+                                            </figure>
+                                            <div class="content">
+                                                <p>These sections are always so tough for me to write because I want to
+                                                    include relevant information about myself but I also don't want to
+                                                    wax poetic. My professional journey</p>
+                                                <p>I certainly wouldn't consider myself a Polymath because I'm not
+                                                    verbose in any one domain but I would classify myself as a life-long
+                                                    learner. I am an avid reader and the list of my 'hobbies' include
+                                                    nutrition and fitness, creating art (of which I've highlighted in
+                                                    this portfolio), cinematography,</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
                         </div>
@@ -132,34 +145,34 @@
     <section id="projects" class="section is-medium" style="background-color: gray">
         <div class="container">
             <div class="content has-text-centered">
-                <h1 class="title" style="color: #F49575">PROJECTS</h1>
-            </div>
-            <div class="tile is-vertical">
-                <div class="tile">
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification" style="background-color: #F49575">
-                            <figure class="image is-4by3">
-                                <img src="images/dictionary_app.png">
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification" style="background-color: #F49575;">
-                            <figure class="image is-4by3">
-                                <img src="images/ios_calender_app.png">
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification" style="background-color: #F49575;">
-                            <figure class="image is-4by3">
-                                <img src="images/coming_soon.jpg">
-                            </figure>
-                        </article>
+                <h1 class="title" style="color: #F49575;">PROJECTS</h1>
+                <div class="tile is-vertical">
+                    <div class="tile">
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification" style="background-color: #F49575">
+                                <h3>Google Dictionary Widget</h3>
+                                <figure class="image is-3by2">
+                                    <img src="images/dictionary.jpg">
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification" style="background-color: #F49575;">
+                                <figure class="image is-3by2">
+                                    <img src="images/ios_calendar.jpg">
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification" style="background-color: #F49575;">
+                                <figure class="image is-5by4">
+                                    <img src="images/coming_soon.jpg">
+                                </figure>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!--Connect-->
     <section id="connect" class="section is-medium" style="background-color: #506E6F">
@@ -215,19 +228,6 @@
         </div>
     </footer>
     <script>
-        //    $(".modal-button").click(function() {
-        //        var target = $(this).data("target");
-        //        $("html").addClass("is-clipped");
-        //        $(target).addClass("is-active");
-        //    });
-
-        //    $("modal-close").click(function() {
-        //        $("html").removeClass("is-clipped");
-        //        $(this).parent().removeClass("is-active");
-        //    });
-
-
-
         //var button = document.getElementsByClassName('modal-button');
         // var modal = document.getElementsByClassName('modal');
         // var close = document.getElementsByClassName('delete')[0];
@@ -239,12 +239,12 @@
         // close.onclick = function() {
         //     modal.style.display= 'none';
         // };
-        
+
         var aboutButton = document.getElementById('about-button');
         var aboutModal = document.getElementById('about-modal');
         var aboutClose = document.getElementById('about-button-delete');
         //var aboutNoScroll = document.getElementById('about-parent');
-        
+
         aboutButton.onclick = function () {
             aboutModal.style.display = 'block';
         }
@@ -253,13 +253,13 @@
         }
 
 
-        
-      
-        
+
+
+
         var professionalButton = document.getElementById('professional-button');
         var professionalModal = document.getElementById('professional-modal');
         var professionalClose = document.getElementById('professional-button-delete');
-        
+
         professionalButton.onclick = function () {
             professionalModal.style.display = 'block';
         }
@@ -278,7 +278,6 @@
         creativeClose.onclick = function () {
             creativeModal.style.display = 'none';
         };
-        
     </script>
 </body>
 

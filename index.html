@@ -138,24 +138,24 @@
                             </header>
                             <section class="modal-card-body content has-text-centered">
                                 <div class="content has-text-centered">
-                                    <p>I want to showcase my creative side here as well. I will try to update this section periodically with new art.</p>
-                                    <h5>Astronaut: Acrylic on Canvas</h5>
+                                    <p>I want to showcase my creative side here as well. I will try to update this section periodically with new art as I continue to learn and venture into new mediums.</p>
+                                    <h6>"Space Fall"</h6>
                                     <figure class="image is-3by2">
                                         <img src="images/astronaut.jpg">
                                     </figure>
-                                    <h5>Abstract: Acrylic on Canvas</h5>
+                                    <h6>"Splatter"</h6>
                                     <figure class="image is-3by2">
                                         <img src="images/abstract.jpg">
                                     </figure>
-                                    <h5>Flamingo: Acrylic on Canvas</h5>
+                                    <h6>"Sad Flamingo is sad"</h6>
                                     <figure class="image is-3by2">
                                         <img src="images/flamingo.jpg">
                                     </figure>
-                                    <h5>Galaxy: Acrylic on Canvas</h5>
+                                    <h5>"Space Time"</h5>
                                     <figure class="image is-3by2">
                                         <img src="images/galaxy-painting.jpg">
                                     </figure>
-                                    <h5>Galaxy: Procreate on iPad Pro</h5>
+                                    <h5>"Swirling Galaxy"</h5>
                                     <figure class="image is-3by2">
                                         <img src="images/galaxy-ipad.png">
                                     </figure>
@@ -173,38 +173,74 @@
         <div class="container">
             <div class="content has-text-centered">
                 <h1 class="title" style="color: #F49575;">PROJECTS</h1>
-                <div class="tile is-vertical">
-                    <div class="tile">
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification" style="background-color: #F49575">
-                                <h3>Google Dictionary Widget</h3>
-                                <figure class="image is-3by2">
-                                    <img src="images/dictionary.jpg">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification" style="background-color: #F49575;">
-                                <figure class="image is-3by2">
-                                    <img src="images/ios_calendar.jpg">
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification" style="background-color: #F49575;">
-                                <figure class="image is-5by4">
-                                    <img src="images/coming_soon.jpg">
-                                </figure>
-                            </article>
-                        </div>
+            </div>
+        <div class="tile is-ancestor is-12">
+            <div class="tile is-parent is-4">
+                <article class="tile is-child">
+                    <a id="dictionary-button" class="title modal-button">
+                        <figure class="image is-3by2">
+                        <img src="images/dictionary-cover.jpg">
+                        </figure>
+                    </a>
+                </article>
+                <div id="dictionary-modal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head" style="background-color: gray;">
+                            <p class="modal-card-title has-text-centered" style="color: #DA8498">Google Dictionary Widget</p>
+                            <button id="dictionary-button-delete" class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body content has-text-centered">
+                            <div class="content has-text-centered">
+                               <p>This Google Dictionary Widget is a recreation of the functionality that you would find if you typed any word into Google. I built this app with a mentor and we used Vue.js and the api from Wordsapi. You can look for this widget on my CodePen profile here.</p>
+                               <p>Click the picture below and test it out yourself!</p>
+                               <figure class="image is-3by2">
+                                   <a href="https://codepen.io/inlikecoolhand/pen/NWKjYGQ" target="_blank">
+                                       <img src="images/dictionary-screenshot.jpg">
+                                   </a>
+                               </figure>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
+            <div class="tile is-parent is-4">
+                <article class="tile is-child">
+                    <a id="ios-button" class="title modal-button">
+                        <figure class="image is-3by2">
+                            <img src="images/ios_calendar.jpg">
+                        </figure>
+                    </a>
+                </article>
+                <div id="ios-modal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head" style="background-color: gray;">
+                            <p class="modal-card-title has-test-centered" style="color: #DA8498">iOS Icon</p>
+                            <button id="ios-button-delete" class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body content has-text-centered">
+                            <div class="content has-text-centered">
+                                <p></p>
+                                <p>Click the picture below and test it out yourself!</p>
+                                <figure class="image is-3by2">
+                                    <a href="https://codepen.io/inlikecoolhand/pen/PMOzjZ" target="_blank">
+                                        <img src="images/ios-icon.jpg">
+                                    </a>
+                                </figure>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="tile is-parent is-4" style="background-color: aliceblue;"></div>
+        </div>
+        </div>
     </section>
     <!--Connect-->
     <section id="connect" class="section is-medium" style="background-color: #506E6F">
         <div class="container">
-            <h1 class="title has-text-centered">CONNECT</h1>
+            <h1 class="title has-text-centered" style="color: white">CONNECT</h1>
         </div>
     </section>
     <!--Footer-->
@@ -250,7 +286,7 @@
                 </div>
             </div>
             <div class="footnote content has-text-centered" style="color: #F49575">
-                <p>Designed by Luke Flint 2020</p>
+                <p>Designed by Luke Flint &copy2020</p>
             </div>
         </div>
     </footer>
@@ -266,11 +302,10 @@
         // close.onclick = function() {
         //     modal.style.display= 'none';
         // };
-
+        //About Modal Card 
         var aboutButton = document.getElementById('about-button');
         var aboutModal = document.getElementById('about-modal');
         var aboutClose = document.getElementById('about-button-delete');
-        //var aboutNoScroll = document.getElementById('about-parent');
 
         aboutButton.onclick = function () {
             aboutModal.style.display = 'block';
@@ -279,10 +314,7 @@
             aboutModal.style.display = 'none';
         }
 
-
-
-
-
+        //Professional Modal Card
         var professionalButton = document.getElementById('professional-button');
         var professionalModal = document.getElementById('professional-modal');
         var professionalClose = document.getElementById('professional-button-delete');
@@ -294,6 +326,7 @@
             professionalModal.style.display = 'none';
         };
 
+        //Creative Modal Card 
         var creativeButton = document.getElementById('creative-button');
         var creativeModal = document.getElementById('creative-modal');
         var creativeClose = document.getElementById('creative-button-delete')
@@ -305,6 +338,33 @@
         creativeClose.onclick = function () {
             creativeModal.style.display = 'none';
         };
+
+        //Dictionary Modal Card
+        var dictionaryButton = document.getElementById('dictionary-button');
+        var dictionaryModal = document.getElementById('dictionary-modal');
+        var dictionaryClose = document.getElementById('dictionary-button-delete');
+
+        dictionaryButton.onclick = function () {
+            dictionaryModal.style.display = 'block';
+        }
+
+        dictionaryClose.onclick = function () {
+            dictionaryModal.style.display = 'none';
+        };
+
+        //iOS Modal Card
+        var iosButton = document.getElementById('ios-button');
+        var iosModal = document.getElementById('ios-modal');
+        var iosClose = document.getElementById('ios-button-delete');
+
+        iosButton.onclick = function () {
+            iosModal.style.display = 'block';
+        }
+
+        iosClose.onclick = function () {
+            iosModal.style.display = 'none';
+        };
+
     </script>
 </body>
 

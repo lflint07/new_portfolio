@@ -14,7 +14,7 @@
 
 <body>
     <!-- Hero-->
-    <section id="home" class="hero is-fullheight" style="background-color: #1B2F38">
+    <section id="home" class="hero is-fullheight">
         <div class="hero-body"
             style="background-image: url('images/galaxy-update.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center center; display: flex; flex-wrap: wrap;">
             <div class="container has-text-centered">
@@ -25,9 +25,9 @@
     </section>
     <!-- Navbar-->
     <nav id="main-navbar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation"
-        style="background-color: #1B2F38; background-size: auto;">
+        style="background-color: #1B2F38;">
         <div class="container">
-            <div class="navbar-menu is-active">
+            <div class="navbar-menu is-active" style="background-color: #1B2F38;">
                 <div class="navbar-end">
                     <a class="navbar-item" href="#home" style="color: #F49575;">Home</a>
                     <a class="navbar-item" href="#about" style="color: #F49575;">About</a>
@@ -115,7 +115,6 @@
                                             <li>Business Plan Creation</li>
                                             <li>Documentation and Contract Review </li>
                                             <li>Procedures and Process Creation</li>
-                                        
                                         </ul>
                                     </p>
                                 </div>
@@ -193,7 +192,7 @@
                         <section class="modal-card-body content has-text-centered">
                             <div class="content has-text-centered">
                                <p>This Google Dictionary Widget is a recreation of the functionality that you would find if you typed any word into Google. I built this app with a mentor and we used Vue.js and the api from Wordsapi. You can look for this widget on my CodePen profile here.</p>
-                               <p>Click the picture below and test it out yourself!</p>
+
                                <figure class="image is-3by2">
                                    <a href="https://codepen.io/inlikecoolhand/pen/NWKjYGQ" target="_blank">
                                        <img src="images/dictionary-screenshot.jpg">
@@ -216,13 +215,12 @@
                     <div class="modal-background"></div>
                     <div class="modal-card">
                         <header class="modal-card-head" style="background-color: gray;">
-                            <p class="modal-card-title has-test-centered" style="color: #DA8498">iOS Icon</p>
+                            <p class="modal-card-title has-text-centered" style="color: #DA8498">iOS Icon</p>
                             <button id="ios-button-delete" class="delete" aria-label="close"></button>
                         </header>
                         <section class="modal-card-body content has-text-centered">
                             <div class="content has-text-centered">
-                                <p></p>
-                                <p>Click the picture below and test it out yourself!</p>
+                                <p>This app was created to mimic that of the iOS calendar icon that displays the date and time. This was created using simple HTML, CSS, and Javascript. Try it out from my CodePen page!</p>
                                 <figure class="image is-3by2">
                                     <a href="https://codepen.io/inlikecoolhand/pen/PMOzjZ" target="_blank">
                                         <img src="images/ios-icon.jpg">
@@ -233,7 +231,34 @@
                     </div>
                 </div>
             </div>
-            <div class="tile is-parent is-4" style="background-color: aliceblue;"></div>
+            <div class="tile is-parent is-4">
+                <article class="tile is-child">
+                    <a id="ontask-button" class="title modal-button">
+                        <figure class="image is-3by2">
+                            <img src="images/notes.jpg">
+                        </figure>
+                    </a>
+                </article>
+                <div id="ontask-modal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head" style="background-color: gray;">
+                            <p class="modal-card-title has-text-centered" style="color: #DA8498;">OnTask App</p>
+                            <button id="ontask-button-delete" class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body content has-text-centered">
+                            <div class="content has-text-centered">
+                                <p>This app is still a work in progress but it will function as a task app where the user can input data and operate a daily check list. This app was a walk through tutorial with good friend. We used React.js for the front-end and Rails for the back-end code. I will continue to push updates to my github and then add the link once this project is finished.</p>
+                                <figure class="image">
+                                    <a href="https://github.com/lflint07/on_task_react" target="_blank">
+                                        <img src="images/ontask-github.jpg">
+                                    </a>
+                                </figure>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
     </section>
@@ -363,6 +388,19 @@
 
         iosClose.onclick = function () {
             iosModal.style.display = 'none';
+        };
+
+        //OnTask Modal Card 
+        var ontaskButton = document.getElementById('ontask-button');
+        var ontaskModal = document.getElementById('ontask-modal');
+        var ontaskClose = document.getElementById('ontask-button-delete');
+
+        ontaskButton.onclick = function () {
+            ontaskModal.style.display = 'block';
+        }
+
+        ontaskClose.onclick = function () {
+            ontaskModal.style.display = 'none';
         };
 
     </script>
